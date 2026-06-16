@@ -1,12 +1,11 @@
 import random
-digito_1 = random.randint(0, 9)
-digito_2 = random.randint(0, 9)
-digito_3 = random.randint(0, 9)
+digito_1 = random.randint(0,9)
+digito_2 = random.randint(0,9)
+digito_3 = random.randint(0,9)
 termo1 = 0
 termo2 = 0
 termo3 = 0
 for chance in range(10):
-    print(digito_1, digito_2, digito_3)
     adivinha_1 = int(input("Qual é o primeiro digito? "))
     adivinha_2 = int(input("Qual é o segundo digito? "))
     adivinha_3 = int(input("Qual é o terceiro digito? "))
@@ -32,7 +31,9 @@ for chance in range(10):
         termo3 = "_"
     print (termo1, termo2, termo3)
 
-    if termo1 == "+" and termo2 == "+" and termo3 == "+":
+    if digito_1 == adivinha_1 and digito_2 == adivinha_2 and digito_3 == adivinha_3:
         print ("Parabéns, você acertou!")
         break
-print ("Que pena, você errou, tente novamente depois!")
+if digito_1 != adivinha_1 and digito_2 != adivinha_2 and digito_3 != adivinha_3:
+    print ("Que pena, você errou, tente novamente depois!")
+    print (f"Resposta: {digito_1, digito_2, digito_3}")
